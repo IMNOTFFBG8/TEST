@@ -96,6 +96,7 @@ function library:Keybind(key)
         end
     end)
 end
+
 function library:Window(name) 
     windowCount = windowCount + 1
     local winCount = windowCount
@@ -156,15 +157,15 @@ function library:Window(name)
     Minimise.Size = UDim2.new(0, 22, 0, 22)
     Minimise.ZIndex = 7 + zindex
     Minimise.Font = Enum.Font.SourceSansLight
-    Minimise.Text = "_"
+    Minimise.Text = "X"
     Minimise.TextColor3 = Color3.fromRGB(0, 0, 0)
     Minimise.TextSize = 20.000
     Minimise.MouseButton1Up:connect(function()
         Window.Visible = not Window.Visible
 	if Window.Visible then
-		Minimise.Text = "_"
+		Minimise.Text = "X"
 	else
-		Minimise.Text = "+"
+		Minimise.Text = "▢"
 	end
     end)
 
